@@ -4,7 +4,6 @@ public class App {
 
     public static int counter = 0;
 
-
     public static synchronized void increment(){
         counter++;
     }
@@ -38,9 +37,7 @@ public class App {
         } catch (InterruptedException e){
             e.printStackTrace();
         }
-
         System.out.println("counter is: " + counter);
-
     }
 
     public static void main(String[] args) {
@@ -48,8 +45,5 @@ public class App {
         for (int i = 0; i < 100; i++) {
             process();
         }
-
-
-
     }
 }
