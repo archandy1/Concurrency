@@ -1,50 +1,50 @@
-// Klasa wewnętrzna z metodami produce() i consume()
+// Internal class with produce() and consume() methods
 static class waitNotifyExample {
 
-    // Metoda produce() - wątek producenta
+    // <> produce() - producer thread
     public void produce() throws InterruptedException {
-        synchronized (this) {  // Synchronizacja na obiekcie 'this'
-            System.out.println("Running the produce mothod...");  // Informacja o rozpoczęciu produkcji
-            wait();  // Wątek wchodzi w stan oczekiwania i zwalnia blokadę
-            System.out.println("Again, in the produce metohd, resumed after consume");  // Wątek wraca do działania po powiadomieniu
+        synchronized (this) {  // Synchronization on the 'this' object
+            System.out.println("Running the produce method...");  // Information about the start of production
+            wait();  // The thread goes into a waiting state and releases the lock
+            System.out.println("Again, in the produce method, resumed after consume");  // The thread resumes after being notified
         }
     }
 
-    // Metoda consume() - wątek konsumenta
+    // consume() method - consumer thread
     public void consume() throws InterruptedException {
-        Thread.sleep(1000);  // Symulacja opóźnienia, aby dać czas producentowi na rozpoczęcie
-        synchronized (this) {  // Synchronizacja na obiekcie 'this'
-            System.out.println("Cousume method is executed...");  // Informacja o rozpoczęciu konsumpcji
-            notify();  // Powiadomienie producenta, że może kontynuować
+        Thread.sleep(1000);  // Simulate delay to give the producer time to start
+        synchronized (this) {  // Synchronization on the 'this' object
+            System.out.println("Consume method is executed...");  // Information about the start of consumption
+            notify();  // Notify the producer that it can continue
         }
     }
 }
 
 public static void main(String[] args) throws InterruptedException {
-    waitNotifyExample process = new waitNotifyExample();  // Obiekt procesu, na którym działają oba wątki
+    waitNotifyExample process = new waitNotifyExample();  // Process object on which both threads operate
 
-    // Wątek producenta
+    // Producer thread
     Thread t1 = new Thread(() -> {
         try {
-            process.produce();  // Wywołanie metody produce
+            process.produce();  // Call the produce method
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     });
 
-    // Wątek konsumenta
+    // Consumer thread
     Thread t2 = new Thread(() -> {
         try {
-            process.consume();  // Wywołanie metody consume
+            process.consume();  // Call the consume method
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     });
 
-    // Start obu wątków
+    // Start both threads
     t1.start();
     t2.start();
 
-    t1.join();  // Oczekiwanie na zakończenie wątku t1
-    t2.join();  // Ocz   ekiwanie na zakończenie wątku t2
+    t1.join();  // Wait for thread t1 to finish
+    t2.join();  // Wait for thread t2 to finish
 }
