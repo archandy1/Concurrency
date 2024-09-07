@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4decd35c-479a-4027-a350-cc72f0c2b811" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocurrencyMultithreading.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/join/JoinMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/runnable/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sleep/ThreadSleep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/synchronization/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/synchronization/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/synchronization/MonitorLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/waitNotifyExample/WaitNotifyExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/synchronization/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/synchronization/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +43,13 @@
     "Application.Main (3).executor": "Run",
     "Application.Main.executor": "Run",
     "Application.ThreadSleep.executor": "Run",
+    "Application.WaitNotifyExample.executor": "Run",
     "Application.sleep.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/apleczkan/IdeaProjects/CocurrencyMultithreading/CocurrencyMultithreading/src/join",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
@@ -70,13 +64,13 @@
       <recent name="C:\Users\apleczkan\IdeaProjects\CocurrencyMultithreading\CocurrencyMultithreading\src\runnable" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.WaitNotifyExample">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="synchronization.App" />
       <module name="CocurrencyMultithreading" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="synchronization.*" />
+          <option name="PATTERN" value="waitNotifyExample.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,15 +91,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CocurrencyMultithreading" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="WaitNotifyExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
+      <option name="MAIN_CLASS_NAME" value="WaitNotifyExample" />
       <module name="CocurrencyMultithreading" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WaitNotifyExample" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.JoinMethod" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.sleep.Main" />
-        <item itemvalue="Application.Main (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -144,5 +139,16 @@
       <updated>1725304523373</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
